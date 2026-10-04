@@ -1,0 +1,16 @@
+mapping_node:
+  ros__parameters:
+    pose_topic: "/drone/odometry"
+    depth_topic: "/camera/depth/image_raw"
+    camera_info_topic: "/camera/camera_info"
+    map_frame: "map"
+    camera_frame: "camera_optical_frame"
+    base_frame: "base_link"
+    min_depth_m: 0.2
+    max_depth_m: 8.0
+    pixel_stride: 4
+    voxel_size_m: 0.05
+    max_points: 200000
+    max_map_points: 1000000
+    max_pose_age_sec: 0.2
+    publish_rate_hz: 5.0

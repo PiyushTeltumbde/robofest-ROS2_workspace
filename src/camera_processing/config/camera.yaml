@@ -1,0 +1,29 @@
+# Camera Processing and Calibration Configuration
+image_decoder:
+  ros__parameters:
+    enable_rectification: false
+    output_encoding: "bgr8"
+    downsample_factor: 1.0
+
+camera_info_publisher:
+  ros__parameters:
+    frame_id: "camera_optical_frame"
+    camera_name: "sar_quad_camera"
+    image_width: 640
+    image_height: 480
+    distortion_model: "plumb_bob"
+    # Placeholder intrinsic matrix K [fx, 0, cx, 0, fy, cy, 0, 0, 1]
+    camera_matrix: [535.4, 0.0, 320.1,
+                    0.0, 539.2, 247.6,
+                    0.0, 0.0, 1.0]
+    # Distortion coefficients [k1, k2, p1, p2, k3]
+    distortion_coefficients: [-0.04, 0.08, 0.001, -0.002, 0.0]
+    # Rectification matrix R (identity for monocular)
+    rectification_matrix: [1.0, 0.0, 0.0,
+                           0.0, 1.0, 0.0,
+                           0.0, 0.0, 1.0]
+    # Projection matrix P (3x4)
+    projection_matrix: [535.4, 0.0, 320.1, 0.0,
+                        0.0, 539.2, 247.6, 0.0,
+                        0.0, 0.0, 1.0, 0.0]
+    publish_rate_hz: 30.0

@@ -1,0 +1,30 @@
+# ROS 2 generated folders
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# C++
+*.o
+*.so
+
+# IDE
+.vscode/
+.idea/
+
+# Colcon
+.colcon/
+
+# Python virtual environments
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+

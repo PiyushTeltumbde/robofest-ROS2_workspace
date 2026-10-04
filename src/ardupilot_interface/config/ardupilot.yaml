@@ -1,0 +1,15 @@
+# ArduPilot MAVLink Interface Configuration
+ardupilot_node:
+  ros__parameters:
+    # Connection endpoint (e.g., "udp:127.0.0.1:14550", "serial:/dev/ttyACM0:921600")
+    connection: "udp:127.0.0.1:14550"
+    baudrate: 921600
+    system_id: 1
+    component_id: 1
+    target_system: 1
+    target_component: 1
+    stream_rates:
+      imu_hz: 50.0
+      gps_hz: 10.0
+      baro_hz: 10.0
+      battery_hz: 1.0

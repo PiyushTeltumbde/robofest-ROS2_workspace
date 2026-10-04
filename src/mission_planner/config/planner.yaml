@@ -1,0 +1,11 @@
+# Autonomous Search-and-Rescue Mission Planner Configuration
+planner_node:
+  ros__parameters:
+    planner_type: "RRT_STAR"
+    max_velocity_mps: 3.0
+    max_acceleration_mps2: 1.5
+    safety_margin_m: 0.8
+    replan_frequency_hz: 2.0
+    search_pattern: "LAWNMOWER"
+    flight_altitude_m: 5.0
+    coverage_spacing_m: 4.0

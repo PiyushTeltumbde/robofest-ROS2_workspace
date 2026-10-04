@@ -1,0 +1,9 @@
+# Drone State Estimation Configuration
+state_estimator_node:
+  ros__parameters:
+    state_frame_id: "odom"
+    base_frame_id: "base_link"
+    publish_rate_hz: 50.0
+    enable_sanity_checks: true
+    max_linear_velocity_mps: 15.0
+    max_angular_velocity_radps: 3.5

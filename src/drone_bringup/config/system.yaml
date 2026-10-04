@@ -1,0 +1,24 @@
+# Autonomous Search-and-Rescue Quadcopter System Parameters
+system:
+  ros__parameters:
+    vehicle_name: "sar_quad_alpha"
+    autopilot: "ArduPilot"
+    companion_computer: "Laptop_GPU"
+    camera_source: "Raspberry_Pi_5"
+    frames:
+      map: "map"
+      odom: "odom"
+      base_link: "base_link"
+      camera_link: "camera_link"
+      camera_optical_frame: "camera_optical_frame"
+      imu_link: "imu_link"
+    rates:
+      fast_loop_hz: 50.0
+      planning_loop_hz: 2.0
+      mapping_loop_hz: 5.0
+    safety:
+      max_tilt_angle_deg: 35.0
+      geofence_radius_m: 200.0
+      max_altitude_m: 30.0
+      battery_low_threshold_pct: 20.0
+      battery_critical_threshold_pct: 10.0

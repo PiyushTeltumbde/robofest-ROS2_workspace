@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>drone_bringup</name>
+  <version>0.1.0</version>
+  <description>Master bringup and modular launch configurations for SAR quadcopter prototype</description>
+  <maintainer email="harsh@todo.todo">harsh-mahamuni</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+
+  <exec_depend>camera_receiver</exec_depend>
+  <exec_depend>camera_processing</exec_depend>
+  <exec_depend>orbslam3_wrapper</exec_depend>
+  <exec_depend>sensor_fusion</exec_depend>
+  <exec_depend>drone_state_estimation</exec_depend>
+  <exec_depend>mapping_3d</exec_depend>
+  <exec_depend>ardupilot_interface</exec_depend>
+  <exec_depend>drone_tf</exec_depend>
+  <exec_depend>mission_planner</exec_depend>
+  <exec_depend>drone_interfaces</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

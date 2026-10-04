@@ -1,0 +1,75 @@
+%YAML:1.0
+
+# ------------------------------------------------------------------------------
+# ROS 2 Parameters for orbslam3_node
+# ------------------------------------------------------------------------------
+orbslam3_node:
+  ros__parameters:
+    vocabulary_file: "/home/harsh-mahamuni/ORB_SLAM3/Vocabulary/ORBvoc.txt"
+    settings_file: "/home/harsh-mahamuni/ros2_ws/src/orbslam3_wrapper/config/orbslam3.yaml"
+    sensor_mode: "MONOCULAR"
+    camera_frame: "camera_optical_frame"
+    use_viewer: false
+
+# ------------------------------------------------------------------------------
+# ORB-SLAM3 System Configuration
+# ------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+# Camera resolution (from current stream: 640x480)
+Camera.width: 640
+Camera.height: 480
+
+# Camera frames per second (from current stream: 30 FPS)
+Camera.fps: 30
+
+# Color order of images (0: BGR, 1: RGB; camera receiver stream provides BGR8)
+Camera.RGB: 0
+
+# ------------------------------------------------------------------------------
+# Camera Calibration Parameters (PinHole model)
+#
+# IMPORTANT NOTICE:
+# The values below are UNCALIBRATED nominal geometric defaults for a 640x480 image
+# (principal point cx=320, cy=240, nominal focal length fx=500, fy=500, zero distortion).
+# Real physical camera calibration MUST be performed using a calibration checkerboard
+# (e.g. `ros2 run camera_calibration cameracalibrator`) to obtain actual intrinsics
+# before operational visual localization or drone flight.
+# DO NOT pretend or assume these nominal placeholder values are calibrated.
+# ------------------------------------------------------------------------------
+Camera1.fx: 500.0
+Camera1.fy: 500.0
+Camera1.cx: 320.0
+Camera1.cy: 240.0
+
+# Distortion parameters (OpenCV RadTan model: k1, k2, p1, p2, k3)
+Camera1.k1: 0.0
+Camera1.k2: 0.0
+Camera1.p1: 0.0
+Camera1.p2: 0.0
+Camera1.k3: 0.0
+
+# ------------------------------------------------------------------------------
+# ORB Feature Extractor Parameters
+# ------------------------------------------------------------------------------
+ORBextractor.nFeatures: 1000
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+# ------------------------------------------------------------------------------
+# Pangolin Viewer Parameters
+# ------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0

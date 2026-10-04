@@ -1,0 +1,7 @@
+# Service request to serialize and save the 3D map to disk
+string file_path
+string map_name
+---
+# Service response
+bool success
+string message
